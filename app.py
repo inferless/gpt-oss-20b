@@ -1,10 +1,9 @@
 import torch
-import os, inferless
+import inferless
 from typing import Optional
 from pydantic import BaseModel, Field
 from transformers import pipeline
 
-os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
 
 @inferless.request
 class RequestObjects(BaseModel):
