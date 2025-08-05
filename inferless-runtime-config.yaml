@@ -3,7 +3,6 @@ build:
   python_packages:
     - torch==2.7.1
     - accelerate==1.9.0
-    - hf-transfer==0.1.9
     - huggingface-hub==0.34.3
     - pydantic==2.11.7
     - inferless==0.2.15
