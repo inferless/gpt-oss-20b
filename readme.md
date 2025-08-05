@@ -8,7 +8,7 @@ Despite its relatively compact size, `gpt‑oss‑20b` delivers performance on p
 OpenAI emphasized safety throughout development: both `gpt‑oss‑20b` and its larger counterpart underwent rigorous risk assessments including adversarial testing for misuse potential and were evaluated through OpenAI’s **Preparedness Framework**, showing that even with potential fine‑tuning, the model did not reach high-risk thresholds on biological, cyber, or self‑improvement dimensions.
 
 ## TL;DR:
-- Deployment of Qwen3-Coder-30B-A3B-Instruct model using [transformers](https://github.com/huggingface/transformers).
+- Deployment of gpt‑oss‑20b model using [transformers](https://github.com/huggingface/transformers).
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
 - Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
@@ -49,7 +49,7 @@ curl --location '<your_inference_url>' \
                     {
                       "name": "prompt",
                       "shape": [1],
-                      "data": ["Write a quick sort algorithm."],
+                      "data": ["Explain quantum mechanics clearly and concisely."],
                       "datatype": "BYTES"
                     }
     ]
