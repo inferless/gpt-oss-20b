@@ -22,7 +22,7 @@ class ResponseObjects(BaseModel):
 
 class InferlessPythonModel:
     def initialize(self):
-        model_id = "rbgo/gpt-oss-20b-hf"
+        model_id = "Inferless/gpt-oss-20b"
         self.pipe = pipeline(
             "text-generation",
             model=model_id,
