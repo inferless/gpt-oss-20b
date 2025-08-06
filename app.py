@@ -51,7 +51,6 @@ class InferlessPythonModel:
                 **generation_kwargs
             )
         
-        # Get the last message (assistant's response) from the conversation
         generated_text = outputs[0]["generated_text"]
         return ResponseObjects(generated_text=generated_text)
 
