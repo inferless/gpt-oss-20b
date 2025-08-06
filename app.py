@@ -1,5 +1,4 @@
 import torch
-import os
 import inferless
 from typing import Optional
 from pydantic import BaseModel, Field
@@ -10,7 +9,7 @@ class RequestObjects(BaseModel):
     prompt: str = Field(default="Explain quantum mechanics clearly and concisely.")
     system_prompt: Optional[str] ="You are a helpful and knowledgeable assistant."
     max_new_tokens: Optional[int] = 256
-    temperature: Optional[float] =0.7
+    temperature: Optional[float] = 0.7
     top_p: Optional[float] = 0.9
     top_k: Optional[int] = 50
     do_sample: Optional[bool] = True
