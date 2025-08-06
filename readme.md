@@ -1,7 +1,7 @@
 # Template - Deploy OpenAI GPT-OSS-20B using Inferless
 This 21-billion-parameter autoregressive transformer is designed with a **Mixture-of-Experts (MoE)** architecture, including 32 total experts with 4 active per token.
 
-Built to excel at **agentic reasoning tasks** such as web search, code execution, tool calling, and structured output generation—the model supports **chain-of-thought (CoT)** reasoning and few-shot workflows within OpenAI's “harmony” response format.
+Built to excel at **agentic reasoning tasks** such as web search, code execution, tool calling, and structured output generation the model supports **chain-of-thought (CoT)** reasoning and few-shot workflows within OpenAI's “harmony” response format.
 
 Despite its relatively compact size, `gpt‑oss‑20b` delivers performance on par with OpenAI’s proprietary **o3‑mini** model across benchmarks like **Mathematics (AIME)**, **HealthBench**, **MMLU**, and **coding competitions**, often outperforming larger closed models in specific domains such as competition math and health reasoning.
 
