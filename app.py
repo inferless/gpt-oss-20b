@@ -5,6 +5,7 @@ from typing import Optional
 from pydantic import BaseModel, Field
 from transformers import pipeline
 
+os.environ['HF_HUB_DOWNLOAD_TIMEOUT'] = '3000' 
 
 @inferless.request
 class RequestObjects(BaseModel):
