@@ -1,9 +1,11 @@
 import torch
+import os
 import inferless
 from typing import Optional
 from pydantic import BaseModel, Field
 from transformers import pipeline
 
+os.environ["HF_HUB_DISABLE_XET"]="1"
 
 @inferless.request
 class RequestObjects(BaseModel):
