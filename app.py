@@ -4,6 +4,9 @@ import inferless
 from typing import Optional
 from pydantic import BaseModel, Field
 from transformers import pipeline
+from huggingface_hub import snapshot_download
+
+
 
 os.environ['HF_HUB_DOWNLOAD_TIMEOUT'] = '3000' 
 
@@ -25,9 +28,13 @@ class ResponseObjects(BaseModel):
 class InferlessPythonModel:
     def initialize(self):
         model_id = "openai/gpt-oss-20b"
+        download_path = snapshot_download(
+                    repo_id=model_id,
+                    resume_download=True
+        )
         self.pipe = pipeline(
             "text-generation",
-            model=model_id,
+            model=download_path,
             torch_dtype="auto",
             device_map="auto",
             trust_remote_code=True
