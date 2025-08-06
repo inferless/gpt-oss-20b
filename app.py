@@ -5,6 +5,9 @@ from typing import Optional
 from pydantic import BaseModel, Field
 from transformers import pipeline
 
+os.environ["HF_HUB_DISABLE_XET"]="1"
+
+
 @inferless.request
 class RequestObjects(BaseModel):
     prompt: str = Field(default="Explain quantum mechanics clearly and concisely.")
