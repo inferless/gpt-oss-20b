@@ -25,7 +25,7 @@ class ResponseObjects(BaseModel):
 
 class InferlessPythonModel:
     def initialize(self):
-        model_id = "Inferless/gpt-oss-20b"
+        model_id = "openai/gpt-oss-20b"
         self.pipe = pipeline(
             "text-generation",
             model=model_id,
