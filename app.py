@@ -6,6 +6,8 @@ from pydantic import BaseModel, Field
 from transformers import pipeline
 
 os.environ["HF_HUB_DISABLE_XET"]="1"
+os.environ["HF_HUB_TIMEOUT"] = "200"
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
 
 @inferless.request
 class RequestObjects(BaseModel):
